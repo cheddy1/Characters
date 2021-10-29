@@ -1,86 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-body {
-  background-image: url("{{url_for('static', filename='ostrich_pic.jpg')}}");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%;
-}
-
-h2 {
- font-size: 80px;
- font-family: "Copperplate", Fantasy;
- background-color: lightslategrey;
-}
-
-.vertical-center {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.bottomleft {
-  position: absolute;
-  bottom: 8px;
-  left: 16px;
-  font-size: 30px;
-}
-
-.rightdisplay {
-      position: absolute;
-      right: 16px;
-}
-
-.button {
-  border: none;
-  color: white;
-  padding: 32px 64px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 32px;
-  margin: 8px 4px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-  display: block;
-}
-
-.button1 {
-  background-color: lightslategrey;
-  color: black;
-  border: 4px solid black;
-}
-
-.button1:hover {
-  background-color: mediumseagreen;
-  color: black;
-}
-
-</style>
+ <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
 </head>
 <body>
+ <h2><center><bold>
+  Character Generator
+ </bold></center></h2>
 
-<h2><center><bold>
- Character Generator
-</bold></center></h2>
+ <div class="bottomleft">
+  <bold>A EECS 448 Group 15 Production</bold><br>
+ </div>
 
-<div class="bottomleft">
-<bold>A EECS 448 Group 15 Production</bold><br>
-</div>
-
-<div.b class="vertical-center rightdisplay">
- <form action="/generator" method="POST">
- <button class="button button1" type="submit" name="randomize" value="Randomize">
- Randomize
-</button></form>
- <form action="/information" method="POST">
- <button class="button button1" type="submit" name="information" value="LoadInfo">
- Generator Information
-</button></form>
-</div.b>
+ <div.b class="vertical-center rightdisplay">
+   <form action="/generator" method="POST">
+   <button class="button button1" type="submit" name="randomize" value="Randomize">
+   Randomize
+  </button></form>
+   <form action="/information" method="POST">
+   <button class="button button1" type="submit" name="information" value="LoadInfo">
+   Generator Information
+  </button></form>
+ </div.b>
 
 </body>
 </html>
