@@ -72,12 +72,14 @@ h2 {
 </div>
 
 <div.b class="vertical-center rightdisplay">
- <button class="button button1">
+ <form action="/generator" method="POST">
+ <button class="button button1" type="submit" name="randomize" value="Randomize">
  Randomize
-</button>
- <button class="button button1">
+</button></form>
+ <form action="/information" method="POST">
+ <button class="button button1" type="submit" name="information" value="LoadInfo">
  Generator Information
-</button>
+</button></form>
 </div.b>
 
 </body>

@@ -1,4 +1,5 @@
 import requests
+from flask import render_template
 
 res = requests.get("https://randomuser.me/api/").json().get('results')[0]
 def random_character():
@@ -30,5 +31,7 @@ def random_character_picture():
     return picture
 def random_character_paragraph():
     print( "{} is a {} year old {} from {}.".format(random_character_name(), random_character_age(),random_character_gender(),random_character_home()))
+
+
 
 
