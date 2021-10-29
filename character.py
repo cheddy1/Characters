@@ -1,36 +1,33 @@
 import requests
-from flask import render_template
 
-res = requests.get("https://randomuser.me/api/").json().get('results')[0]
 def random_character():
-    # res = requests.get("https://randomuser.me/api/").json().get('results')[0]
-    result = res
+    return requests.get("https://randomuser.me/api/").json().get('results')[0]
 
-    print(result)
-
-def random_character_name():
-    title = res.get('name').get('title')
-    first = res.get('name').get('first')
-    last = res.get('name').get('last')
+def random_character_name(character):
+    title = character.get('name').get('title')
+    first = character.get('name').get('first')
+    last = character.get('name').get('last')
     return title + '.' + ' ' + first + ' ' + last
 
-def random_character_gender():
-    gender = res.get('gender')
+def random_character_gender(character):
+    gender = character.get('gender')
     return gender
 
-def random_character_home():
-    home = res.get('location').get('country')
+def random_character_home(character):
+    home = character.get('location').get('country')
     return home
 
-def random_character_age():
-    age = res.get('dob').get('age')
+def random_character_age(character):
+    age = character.get('dob').get('age')
     return age
 
-def random_character_picture():
-    picture = res.get('picture').get('large')
+def random_character_picture(character):
+    picture = character.get('picture').get('large')
     return picture
+
 def random_character_paragraph():
-    print( "{} is a {} year old {} from {}.".format(random_character_name(), random_character_age(),random_character_gender(),random_character_home()))
+    character = random_character()
+    return "{} is a {} year old {} from {}.".format(random_character_name(character), random_character_age(character), random_character_gender(character), random_character_home(character))
 
 
 
