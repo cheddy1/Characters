@@ -13,7 +13,7 @@ def index():
 @app.route('/generator',methods = ['POST',"GET"])
 def generator():
     print("in generator")
-    return render_template('generator.html')
+    return render_template('generator.html',data=random_character_paragraph())
 
 @app.route('/information', methods = ['POST','GET'])
 def information():
