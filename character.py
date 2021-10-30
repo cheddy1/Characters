@@ -30,5 +30,7 @@ def random_character_paragraph():
     return "{} is a {} year old {} from {}.".format(random_character_name(character), random_character_age(character), random_character_gender(character), random_character_home(character))
 
 
-
-
+def random_character_link():
+    character = random_character()
+    picture = random_character_picture(character)
+    return picture
