@@ -3,19 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/bootstrap.min.css') }}">
     <title>Title</title>
 </head>
 <body>
- <h2><center><bold>
-  Character Generator
- </bold></center></h2>
- {{data2}}
- <div class="bottomleft">
- <img src="{{data1}}" width="300" height="300">
- </div>
-<div.b class="vertical-center rightdisplay">
-   <form action="/generator" method="POST">
-   <button class="button button1" type="submit" name="randomize" value="Randomize">
-       Randomize</button></form></div.b>
+    <nav class="navbar navbar-custom navbar-expand-lg navbar-light">
+      <div class="container">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link" href="/">Home</a>
+            <div class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="other_tools_dropdown" data-toggle="dropdown" >Other Tools</a>
+              <div class="dropdown-menu" aria-labelledby="service_tools_dropdown">
+                <a class="dropdown-item" href="PLACEHOLDER">Placeholder</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="jumbotron p-5 text-center">
+        <h1 id="title" class="display-4 pb-4 pt-4 " style="background-color: #ededed !important; border-radius: 20px;">Character Builder</h1>
+    </div>
+    <div class="container">
+        <div>
+            {{data2}}
+        </div>
+        <div>
+            <img src="{{data1}}" width="300" height="300">
+        </div>
+        <div class="btn-toolbar" role="toolbar" style="justify-content: center; display: flex;">
+            <div class="btn-group m-2" role="group">
+                <a href="generator" id="publish_nav_button" class="btn btn-primary btn-lg">Generate Another</a>
+            </div>
+        </div>
+    </div>
+
+
+    <script type=text/javascript src="{{url_for('static', filename='popper.min.js') }}"></script>
+    <script type=text/javascript src="{{url_for('static', filename='jquery.js') }}"></script>
+    <script type=text/javascript src="{{url_for('static', filename='bootstrap.min.js') }}"></script>
 </body>
 </html>

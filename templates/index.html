@@ -1,25 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
- <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/bootstrap.min.css') }}">
 </head>
 <body>
- <h2><center><bold>
-  Character Generator
- <div class="bottomleft">
-  <bold>A EECS 448 Group 15 Production</bold><br>
- </div>
 
- <div.b class="vertical-center rightdisplay">
-   <form action="/generator" method="POST">
-   <button class="button button1" type="submit" name="randomize" value="Randomize">
-   Randomize
-  </button></form>
-   <!--<form action="/information" method="POST">
-   <button class="button button1" type="submit" name="information" value="LoadInfo">
-   Generator Information
-  </button></form>--!>
- </div.b>
+    <div class="jumbotron p-5 text-center">
+        <h1 id="title" class="display-4 pb-4 pt-4 " style="background-color: #ededed !important; border-radius: 20px;">Character Builder</h1>
+    </div>
+    <div class="bottomleft">
+        <bold>A EECS 448 Group 15 Production</bold><br>
+    </div>
+
+    <div class="container p-3">
+        <div class="row">
+            <div class="col">
+                <h3 id="tools_header" class="mb-3 text-center">Tools</h3>
+                <div class="btn-toolbar" role="toolbar" style="justify-content: center; display: flex;">
+                    <div class="btn-group m-2" role="group">
+                        <a href="generator" id="publish_nav_button" class="btn btn-primary btn-lg">Generate a Character!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type=text/javascript src="{{url_for('static', filename='popper.min.js') }}"></script>
+    <script type=text/javascript src="{{url_for('static', filename='jquery.js') }}"></script>
+    <script type=text/javascript src="{{url_for('static', filename='bootstrap.min.js') }}"></script>
 
 </body>
 </html>
