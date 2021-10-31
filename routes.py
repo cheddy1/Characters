@@ -8,12 +8,13 @@ import requests
 # Default route
 @app.route('/')
 def index():
-    return render_template('index.html', data=random_character_paragraph())
+    return render_template('index.html')
 
 @app.route('/generator',methods = ['POST',"GET"])
 def generator():
     print("in generator")
-    return render_template('generator.html', data1=random_character_link(), data2=random_character_paragraph())
+    character = random_character_paragraph()
+    return render_template('generator.html', data1=character[1], data2=character[0])
 
 @app.route('/information', methods = ['POST','GET'])
 def information():
