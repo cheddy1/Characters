@@ -1,0 +1,9 @@
+For the project 3 prototype our group used multiple different design patterns. To start our group used a prototype pattern at the beginning of the project to get a proof of
+concept of our idea. This prototype was able to gather data from different API’s (Application Programming Interface) to string them all together in a webpage and give the user
+a randomly generated character. We used this prototype and built it up throughout the project, which then became the framework of our logic layer and became the backbone of our
+project. Another design pattern our group used for project 3 was the bridge pattern. We used the bridge pattern to create separate classes for each aspect of the character,
+where each class will be calling separate APIs to help generate the character. Another design pattern that our group used was the command pattern. We used the command pattern
+in the user interface to generate a random character and the request is sent to the logic layer where the different APIs are called, and the data is gathered and sent back to
+the webpage where all the information is displayed to the user. One final design patter that our group used for project 3 was a mediator. We used the mediator design pattern to
+coordinate all the different classes to grab a certain piece of data for each aspect of the character and made sure all the data was received and placed in the right spot
+before sending it to the webpage for the user to see. 
