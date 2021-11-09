@@ -31,7 +31,7 @@ def character_bio(text):
     print(text)
     print(r.json())
     groups = r.json()['output'].split('\n')
-    return '\n'.join(groups[:4])
+    return '\n'.join(groups[:2])
 
 def random_character_name(character):
     title = character.get('name').get('title')
