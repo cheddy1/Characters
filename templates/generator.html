@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/bootstrap.min.css') }}">
@@ -25,21 +26,32 @@
       </div>
     </nav>
 
-    <div class="jumbotron p-5 text-center">
-        <h1 id="title" class="display-4 pb-4 pt-4 " style="background-color: #ededed !important; border-radius: 20px;">Random Character Generator</h1>
-    </div>
-    <div class="container">
-        <div>
-            {{data2}}
-        </div>
-        <div>
-            <img src="{{data1}}" width="300" height="300">
-        </div>
-        <div class="btn-toolbar" role="toolbar" style="justify-content: center; display: flex;">
-            <div class="btn-group m-2" role="group">
-                <a href="generator" id="publish_nav_button" class="btn btn-primary btn-lg">Generate Another</a>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="jumbotron p-5 text-center">
+                <h1 id="title" class="display-4 pb-4 pt-4 " style="background-color: #ededed !important; border-radius: 20px;">Random Character Generator</h1>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div>
+                    <img src="{{data1}}" width="300" height="300">
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div>
+                    {{data2}}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="btn-toolbar" role="toolbar" style="justify-content: center; display: flex;">
+                <div class="btn-group m-2" role="group">
+                    <a href="generator" id="publish_nav_button" class="btn btn-primary btn-lg">Generate Another</a>
+                </div>
+            </div>
+        </div>
+
     </div>
 
 
