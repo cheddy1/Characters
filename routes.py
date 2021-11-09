@@ -2,7 +2,7 @@ from flask import render_template
 from . import app
 from .character import random_character, random_character_name, random_character_gender
 from .character import random_character_home, random_character_age, random_character_link
-from .character import random_character_paragraph
+from .character import random_character_paragraph, character_bio
 import requests
 
 # Default route
@@ -14,6 +14,7 @@ def index():
 def generator():
     print("in generator")
     character = random_character_paragraph()
+    print(character_bio(character[0]))
     return render_template('generator.html', data1=character[1], data2=character[0])
 
 @app.route('/information', methods = ['POST','GET'])

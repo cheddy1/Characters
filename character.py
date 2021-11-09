@@ -18,8 +18,20 @@ def character_picture(age, gender):
         'to_age': age+10
         }
     )
-    print(uiface.json())
     return uiface.json()
+
+def character_bio(text):
+    r = requests.post(
+        "https://api.deepai.org/api/text-generator",
+        data={
+            'text': text,
+        },
+        headers={'api-key': '9d321645-60cb-4d93-8e08-3583dd1c4ec9'}
+    )
+    print(text)
+    print(r.json())
+    groups = r.json()['output'].split('\n')
+    return '\n'.join(groups[:4])
 
 def random_character_name(character):
     title = character.get('name').get('title')
@@ -47,7 +59,8 @@ def random_character_paragraph():
     character = random_character()
     avatar = character_picture(random_character_age(character), random_character_gender(character))
     picture = random_character_picture(avatar)
-    return ["{} is a {} year old {} from {}.".format(random_character_name(character), random_character_age(character), random_character_gender(character), random_character_home(character)),picture]
+    text = character_bio("{} is a {} year old {} from {}.".format(random_character_name(character), random_character_age(character), random_character_gender(character), random_character_home(character)))
+    return [text,picture]
 
 
 def random_character_link():
