@@ -14,7 +14,6 @@ def index():
 def generator():
     print("in generator")
     character = random_character_paragraph()
-    print(character_bio(character[0]))
     return render_template('generator.html', data1=character[1], data2=character[0])
 
 @app.route('/information', methods = ['POST','GET'])
