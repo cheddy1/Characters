@@ -23,6 +23,10 @@ def character_picture(age, gender, key):
     )
     return uiface.json()
 
+def character_poem():
+    fav_poem = requests.get('https://www.beanpoems.com/api/poems/random').json().get('body')
+    return fav_poem
+
 def character_bio(text):
     r = requests.post(
         "https://api.deepai.org/api/text-generator",
@@ -67,8 +71,9 @@ def random_character_paragraph():
     age = random_character_age(character)
     home = random_character_home(character)
     gender = random_character_gender(character)
+    poem = character_poem()
     text = character_bio("{} is a {} year old {} from {}.".format(name, age, gender, home))
-    return [text,picture,name,home,age,gender]
+    return [text,picture,name,home,age,gender,poem]
 
 
 def random_character_link():
