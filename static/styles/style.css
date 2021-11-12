@@ -1,5 +1,5 @@
 body {
-  background-image: url("{{url_for('static', filename='ostrich_pic.jpg')}}");
+  background-image: url('../cityBackground.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
@@ -81,7 +81,8 @@ h3 {
     font-family: 'Signika', sans-serif;
 }
 
-.col-md-9 {
-    padding: 10px;
+.col-md-8 {
+    padding-right: 50px;
     background-color: #ededed;
+    border: 4px solid black;
 }
