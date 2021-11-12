@@ -63,8 +63,12 @@ def random_character_paragraph():
         picture = random_character_picture(character_picture(random_character_age(character), random_character_gender(character), UI_API_2))
         if picture == "https://uifaces.co/images/cooldown-avatar.png":
             picture = character['picture']['large']
-    text = character_bio("{} is a {} year old {} from {}.".format(random_character_name(character), random_character_age(character), random_character_gender(character), random_character_home(character)))
-    return [text,picture]
+    name = random_character_name(character)
+    age = random_character_age(character)
+    home = random_character_home(character)
+    gender = random_character_gender(character)
+    text = character_bio("{} is a {} year old {} from {}.".format(name, age, gender, home))
+    return [text,picture,name,home,age,gender]
 
 
 def random_character_link():
