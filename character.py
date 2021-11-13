@@ -26,7 +26,13 @@ def character_picture(age, gender, key):
 def character_hobbies_young():
     hobbies = open('hobbies.txt').read().splitlines()
     hobby1 = random.choice(hobbies)
-    return hobby1
+    hobby2 = random.choice(hobbies)
+    hobby3= random.choice(hobbies)
+    if hobby2 != hobby1 and hobby2 != hobby3 and hobby1 != hobby3:  # if hobbies are different
+        hobbylistyoung = [hobby1, hobby2, hobby3]  # return array of 3 hobbies
+        return hobbylistyoung
+    else:
+        return character_hobbies_young()
 
 def character_hobbies_old():
     hobbiesold = open('hobbiesold.txt').read().splitlines()
@@ -87,7 +93,10 @@ def random_character_paragraph():
     age = random_character_age(character)
     home = random_character_home(character)
     gender = random_character_gender(character)
-    hobbies = character_hobbies_old()
+    if age>=65:
+        hobbies = character_hobbies_old()
+    else:
+        hobbies=character_hobbies_young()
     hobbiestext="{}, {}, {}.".format(hobbies[0], hobbies[1], hobbies[2])
     poem = character_poem()
     text = character_bio("{} is a {} year old {} from {}.".format(name, age, gender, home))
