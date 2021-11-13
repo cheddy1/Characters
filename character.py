@@ -1,4 +1,5 @@
 import requests
+import random
 
 UI_API_1 = '241E1EB8-FFA54369-A0851285-2C688163'
 UI_API_2 = 'A3D1D37D-506D4D4B-B1C36F96-5FF139DB'
@@ -22,6 +23,21 @@ def character_picture(age, gender, key):
         }
     )
     return uiface.json()
+def character_hobbies_young():
+    hobbies = open('hobbies.txt').read().splitlines()
+    hobby1 = random.choice(hobbies)
+    return hobby1
+
+def character_hobbies_old():
+    hobbiesold = open('hobbiesold.txt').read().splitlines()
+    hobby1 =random.choice(hobbiesold)
+    hobby2=random.choice(hobbiesold)
+    hobby3=random.choice(hobbiesold)
+    if hobby2!=hobby1 and hobby2!=hobby3 and  hobby1!=hobby3: #if hobbies are different
+        hobbylist = [hobby1,hobby2,hobby3] #return array of 3 hobbies
+        return hobbylist
+    else:
+        return character_hobbies_old()
 
 def character_poem():
     fav_poem = requests.get('https://www.beanpoems.com/api/poems/random').json().get('body')
@@ -71,9 +87,11 @@ def random_character_paragraph():
     age = random_character_age(character)
     home = random_character_home(character)
     gender = random_character_gender(character)
+    hobbies = character_hobbies_old()
+    hobbiestext="{}, {}, {}.".format(hobbies[0], hobbies[1], hobbies[2])
     poem = character_poem()
     text = character_bio("{} is a {} year old {} from {}.".format(name, age, gender, home))
-    return [text,picture,name,home,age,gender,poem]
+    return [text,picture,name,home,age,gender,poem,hobbiestext]
 
 
 def random_character_link():
