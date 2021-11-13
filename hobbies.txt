@@ -5,25 +5,16 @@ air sports
 airbrushing
 aircraft spotting
 airsoft
-airsofting
 amateur astronomy
 amateur geology
 amateur radio
-american football
-animal fancy
-animals/pets/dogs
-antiquing
-antiquities
-aqua-lung
 archery
 art collecting
-arts
 association football
 astrology
 astronomy
 audiophilia
 australian rules football
-auto audiophilia
 auto racing
 backgammon
 backpacking
@@ -37,9 +28,7 @@ beach/sun tanning
 beachcombing
 beadwork
 beatboxing
-becoming a child advocate
 beekeeping
-bell ringing
 belly dancing
 bicycle polo
 bicycling
@@ -47,27 +36,17 @@ billiards
 bird watching
 birding
 birdwatching
-blacksmithing
-blogging
-bmx
+blogging online
+bike motorcross
 board games
-board sports
-boardgames
 boating
-body building
-bodybuilding
-bonsai tree
 book collecting
-bookbinding
-boomerangs
 bowling
 boxing
 brazilian jiu-jitsu
 breakdancing
 brewing beer
-bridge
 bridge building
-bus spotting
 butterfly watching
 button collecting
 cake decorating
@@ -75,7 +54,6 @@ calligraphy
 camping
 candle making
 canoeing
-car racing
 card collecting
 cartooning
 casino gambling
@@ -86,92 +64,53 @@ chess
 climbing
 cloud watching
 coin collecting
-collecting
-collecting antiques
-collecting artwork
 collecting hats
 collecting music albums
-collecting rpm records
 collecting sports cards
 collecting swords
-color guard
-coloring
 comic book collecting
-compose music
-computer activities
 computer programming
-conworlding
 cooking
-cosplay
-cosplaying
-couponing
-crafts
-crafts (unspecified)
 creative writing
 cricket
-crochet
 crocheting
-cross-stitch
 crossword puzzles
 cryptography
 curling
 cycling
-dance
 dancing
-darts
-debate
- postcard collecting
-diecast collectibles
+debating
+postcard collecting
 digital arts
 digital photography
 disc golf
-do it yourself
 dodgeball
-dog sport
-dolls
-dominoes
-dowsing
+playing dominoes
 drama
 drawing
 driving
 dumpster diving
 eating out
-educational courses
-electronics
 element collecting
 embroidery
-entertaining
 equestrianism
-exercise (aerobics, weights)
-exhibition drill
+exercise
 falconry
-fast cars
 felting
 fencing
 field hockey
 figure skating
-fire poi
 fishing
-fishkeeping
-flag football
 floorball
-floral arrangements
-flower arranging
-flower collecting and pressing
-fly tying
-flying
-footbag
+floral design
+playing footbag
 football
 foraging
 foreign language learning
 fossil hunting
 four wheeling
-freshwater aquariums
-frisbee golf – frolf
+frisbee golf
 gambling
-games
-gaming (tabletop games and role-playing games)
-garage saleing
 gardening
 genealogy
 geocaching
@@ -179,28 +118,21 @@ ghost hunting
 glassblowing
 glowsticking
 gnoming
-go
-go kart racing
 going to movies
 golf
 golfing
-gongoozling
 graffiti
-grip strength
 guitar
 gun collecting
-gunsmithing
 gymnastics
 gyotaku
 handball
-handwriting analysis
 hang gliding
 herping
 hiking
 home brewing
 home repair
 home theater
-homebrewing
 hooping
 horse riding
 hot air ballooning
@@ -208,16 +140,9 @@ hula hooping
 hunting
 ice hockey
 ice skating
-iceskating
-illusion
-impersonations
 inline skating
 insect collecting
-internet
-inventing
-jet engines
-jewelry making
-jigsaw puzzles
+surfing the internet
 jogging
 judo
 juggling
@@ -226,43 +151,24 @@ jump roping
 kabaddi
 kart racing
 kayaking
-keep a journal
-kitchen chemistry
-kite boarding
 kite flying
-kites
 kitesurfing
-knapping
-knife making
 knife throwing
 knitting
-knotting
 lacemaking
 lacrosse
 lapidary
-larping
 laser tag
-lasers
 lawn darts
-learn to play poker
-learning a foreign language
-learning an instrument
-learning to pilot a plane
 leather crafting
-leathercrafting
-lego building
 legos
 letterboxing
 listening to music
 locksport
-machining
-macramé
 macrame
-magic
+magic tricks
 mahjong
 making model cars
-marbles
-marksmanship
 martial arts
 matchstick modeling
 meditation
@@ -280,70 +186,38 @@ motor sports
 motorcycles
 mountain biking
 mountain climbing
-mountaineering
-movie and movie memorabilia collecting
-mushroom hunting/mycology
-musical instruments
-nail art
-needlepoint
+mushroom hunting
 netball
 nordic skating
 orienteering
 origami
-owning an antique car
 paintball
 painting
 papermache
-papermaking
 parachuting
-paragliding or power paragliding
+paragliding
 parkour
-people watching
 photography
-piano
 pigeon racing
 pinochle
-pipe smoking
-planking
-playing music
-playing musical instruments
-playing team sports
+playing the piano
+playing the violin
 poker
 pole dancing
-polo
+horse polo
 pottery
-powerboking
-protesting
+powerbocking
 puppetry
-puzzles
+solving puzzles
 pyrotechnics
-quilting
-r/c boats
-r/c cars
-r/c helicopters
-r/c planes
-racing pigeons
 racquetball
 radio-controlled car racing
 rafting
-railfans
 rappelling
 rapping
 reading
-reading to the elderly
-record collecting
-relaxing
-renaissance faire
-renting movies
-rescuing abused or abandoned animals
 robotics
-rock balancing
 rock climbing
-rock collecting
-rockets
-rocking aids babies
-roleplaying
-roller derby
 roller skating
 rugby
 rugby league football
@@ -384,10 +258,8 @@ snowboarding
 soap making
 soapmaking
 soccer
-socializing with friends/neighbors
-speed cubing (rubix cube)
+socializing
 speed skating
-spelunkering
 spending time with family/kids
 sports
 squash
@@ -431,16 +303,13 @@ tv watching
 ultimate frisbee
 urban exploration
 vehicle restoration
-video game collecting
-video games
 video gaming
 videophilia
 vintage cars
 playing the violin
 volleyball
-volunteer
+volunteering
 walking
-warhammer
 watching movies
 watching sporting events
 water sports
@@ -452,16 +321,16 @@ wine making
 wingsuit flying
 wood carving
 woodworking
-working in a food pantry
 working on cars
-world record breaking
-worldbuilding
+breaking world recrods
 wrestling
-writing
 writing music
-writing songs
 yo-yoing
 yoga
-yoyo
 ziplining
 zumba
+
+
+nail art
+jewelry making
+embroidery

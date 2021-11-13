@@ -97,7 +97,7 @@ def random_character_paragraph():
         hobbies = character_hobbies_old()
     else:
         hobbies=character_hobbies_young()
-    hobbiestext="{}, {}, {}.".format(hobbies[0], hobbies[1], hobbies[2])
+    hobbiestext="{}, {}, and {}.".format(hobbies[0], hobbies[1], hobbies[2])
     poem = character_poem()
     text = character_bio("{} is a {} year old {} from {}.".format(name, age, gender, home))
     return [text,picture,name,home,age,gender,poem,hobbiestext]
