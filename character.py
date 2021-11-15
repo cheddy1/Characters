@@ -102,7 +102,7 @@ def random_character_paragraph():
     age = random_character_age(character)
     home = random_character_home(character)
     gender = random_character_gender(character)
-    if age >= 65:
+    if age >= 60:
         hobbies = character_hobbies_old()
     else:
         hobbies = character_hobbies_young()
