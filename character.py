@@ -100,7 +100,7 @@ def customization_info():
         gender = output["gender"]
         print(name, country, age, gender)
 
-        if gender == "Male" or gender == "male" or gender == "Female" or gender == "female" or gender == "other" or gender == "Other" or gender == "":
+        if gender == "Male" or gender == "male" or gender == "Female" or gender == "female" or gender == "":
             if age != "":
                 if 18 < int(age) < 120:
                     return[name, country, age, gender]

@@ -12,9 +12,10 @@
       <div class="container">
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-link" href="/">Home</a>
-            <a class="nav-link" href="/generator">Character</a>
-            <a class="nav-link" href="/information">Information</a>
+              <a class="nav-link" href="/">Home</a>
+              <a class="nav-link" href="/generator">Character</a>
+              <a class="nav-link" href="/customization">Custom</a>
+              <a class="nav-link" href="/information">Information</a>
           </div>
         </div>
       </div>
@@ -52,7 +53,7 @@
                     {% else %}
                         <input type="text" id="age" name="age"><br>
                     {% endif %}
-                    <label for="gender"><h3>Gender: (Male, Female, Other)</h3></label><br>
+                    <label for="gender"><h3>Gender: (Male or Female)</h3></label><br>
                     {% if gender and gender != 0%}
                         <p1>{{gender}}</p1><br>
                     {% else %}
