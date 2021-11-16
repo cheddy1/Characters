@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/bootstrap.min.css') }}">
+    <title>Character Generator</title>
+</head>
+<body>
+    <nav class="navbar navbar-custom navbar-expand-lg navbar-light" style="background-color: #ededed !important">
+      <div class="container">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link" href="/">Home</a>
+            <a class="nav-link" href="/generator">Character</a>
+            <a class="nav-link" href="/information">Information</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="jumbotron p-5 text-center">
+                <h1 id="title" class="display-4 pb-4 pt-4" style="background-color: #ededed !important; border-radius: 20px;">Custom Character Generation</h1>
+            </div>
+        </div>
+    </div>
+    <div class = "container">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div class="center">
+                    <p1>Enter information that describes your character. Any field left blank will be randomized.</p1><br><br>
+                </div>
+                <form action="/custom_process_test" method="post">
+                    <label for="name"><h3>Name: </h3></label><br>
+                    {% if name and name != 0%}
+                        <p1>{{name}}</p1><br>
+                    {% else %}
+                        <input type="text" id="name" name="name"><br>
+                    {% endif %}
+                    <label for="country"><h3>Country of Origin: </h3></label><br>
+                    {% if country and country != 0%}
+                        <p1>{{country}}</p1><br>
+                    {% else %}
+                        <input type="text" id="country" name="CountryOfOrigin"><br>
+                    {% endif %}
+                    <label for="age"><h3>Age: </h3></label><br>
+                    {% if age and age != 0%}
+                        <p1>{{age}}</p1><br>
+                    {% else %}
+                        <input type="text" id="age" name="age"><br>
+                    {% endif %}
+                    <label for="gender"><h3>Gender: </h3></label><br>
+                    {% if gender and gender != 0%}
+                        <p1>{{gender}}</p1><br>
+                    {% else %}
+                        <input type="text" id="gender" name="gender"><br><br>
+                    {% endif %}
+                    <div class="center">
+                        {% if name or country or age or gender and name != 0 %}
+                        <p1>Generate Your Character!</p1>
+                        {% elif name == 0%}
+                        <p1>A field was entered incorrectly. Try again!</p1><br>
+                        <button type="Submit" class="btn btn-primary" name="submitB" value="Submit Info">Submit Information</button><br>
+                        {% else %}
+                        <button type="Submit" class="btn btn-primary" name="submitB" value="Submit Info">Submit Information</button><br>
+                        {% endif %}
+                    </div>
+                </form>
+                <br>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row">
+            <div class="center" >
+            <form action="/generator" method="POST">
+                {% if name or country or age or gender and name != 0 %}
+                <input type="hidden" name="name" value= {{name}} />
+                <input type="hidden" name="CountryOfOrigin" value= {{country}} />
+                <input type="hidden" name="age" value= {{age}} />
+                <input type="hidden" name="gender" value= {{gender}} />
+                <br>
+                <button type="Submit" class="btn btn-primary" name="generateCustom" value="Generate Custom">Generate Character</button><br>
+                {% endif %}
+            </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script type=text/javascript src="{{url_for('static', filename='popper.min.js') }}"></script>
+    <script type=text/javascript src="{{url_for('static', filename='jquery.js') }}"></script>
+    <script type=text/javascript src="{{url_for('static', filename='bootstrap.min.js') }}"></script>
+</body>
+</html>

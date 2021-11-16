@@ -2,8 +2,7 @@ from flask import render_template
 from . import app
 from .character import random_character, random_character_name, random_character_gender
 from .character import random_character_home, random_character_age, random_character_link, character_hobbies_old
-from .character import random_character_paragraph, character_bio
-import requests
+from .character import random_character_paragraph, character_bio, customization_info
 
 # Default route
 @app.route('/')
@@ -22,3 +21,23 @@ def generator():
 def information():
     print("in information")
     return render_template('information.html')
+
+@app.route('/customization', methods = ['POST','GET'])
+def customization():
+    print("in customization")
+    return render_template('customization.html')
+
+@app.route('/custom_process_test', methods=["POST","GET"])
+def custom_process_test():
+    custom_info = customization_info()
+    name = 0
+    country = 0
+    age = 0
+    gender = 0
+    if custom_info != "Invalid Field":
+        name = custom_info[0]
+        country = custom_info[1]
+        age = custom_info[2]
+        gender = custom_info[3]
+    return render_template('customization.html', name = name, country = country, age = age, gender = gender)
+

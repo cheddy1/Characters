@@ -1,4 +1,5 @@
 import requests
+from flask import request
 import random
 
 UI_API_1 = '241E1EB8-FFA54369-A0851285-2C688163'
@@ -90,18 +91,65 @@ def random_character_picture(character):
     picture = character[0]['photo']
     return picture
 
+def customization_info():
+    if request.method == "POST":
+        output = request.form.to_dict()
+        name = output["name"]
+        country = output["CountryOfOrigin"]
+        age = output["age"]
+        gender = output["gender"]
+        print(name, country, age, gender)
+
+        if gender == "Male" or gender == "male" or gender == "Female" or gender == "female" or gender == "other" or gender == "Other" or gender == "":
+            if age != "":
+                if 0 < int(age) < 120:
+                    return[name, country, age, gender]
+                else:
+                    return("Invalid Field")
+            else:
+                return [name, country, age, gender]
+        else:
+            return("Invalid Field")
+
+
 
 def random_character_paragraph():
     character = random_character()
-    picture = random_character_picture(character_picture(random_character_age(character), random_character_gender(character), UI_API_1))
+    if request.method == "POST":
+        output = request.form.to_dict()
+        if output["name"] != "/":
+            name = output["name"]
+        else:
+            name = random_character_name(character)
+
+        if output["CountryOfOrigin"] != "/":
+            home = output["CountryOfOrigin"]
+        else:
+            home = random_character_home(character)
+
+        if output["age"] != "/":
+            age = int(output["age"])
+        else:
+            age = random_character_age(character)
+
+        if output["gender"] != "/":
+            gender = output["gender"]
+        else:
+            gender = random_character_gender(character)
+
+        print(name, age, home, gender)
+    else:
+        name = random_character_name(character)
+        age = random_character_age(character)
+        home = random_character_home(character)
+        gender = random_character_gender(character)
+
+    picture = random_character_picture(character_picture(age, gender, UI_API_1))
     if picture == "https://uifaces.co/images/cooldown-avatar.png":
         picture = random_character_picture(character_picture(random_character_age(character), random_character_gender(character), UI_API_2))
         if picture == "https://uifaces.co/images/cooldown-avatar.png":
             picture = character['picture']['large']
-    name = random_character_name(character)
-    age = random_character_age(character)
-    home = random_character_home(character)
-    gender = random_character_gender(character)
+
     if age >= 60:
         hobbies = character_hobbies_old()
     else:
