@@ -98,30 +98,26 @@ def customization_info():
         country = output["CountryOfOrigin"]
         age = output["age"]
         gender = output["gender"]
-        print(name, country, age, gender)
+        if gender != "Male" and gender != "male" and gender != "Female" and gender != "female" and gender != "":
+            return ("Invalid Field")
 
-        if gender == "Male" or gender == "male" or gender == "Female" or gender == "female" or gender == "":
-            if age != "":
-                if 18 < int(age) < 120:
-                    return[name, country, age, gender]
-                else:
+        if age != "":
+            print(age)
+            if all(x.isdigit() or x == " " for x in age):
+                if int(age) > 120 or int(age) < 18:
                     return("Invalid Field")
-
-            if country != "":
-                if all(x.isalpha() or x.isspace() for x in country):
-                    return[name,country,age,gender]
-                else:
-                    return("Invalid Field")
-            if name != "":
-                if all(x.isalpha() or x.isspace() for x in name):
-                    return[name,country,age,gender]
-                else:
-                    return("Invalid Field")
-
             else:
-                return [name, country, age, gender]
-        else:
-            return("Invalid Field")
+                return ("Invalid Field")
+
+        if country != "":
+            if not all(x.isalpha() or x == " " for x in country):
+                return("Invalid Field")
+
+        if name != "":
+            if not all(x.isalpha() or x == " " for x in name):
+                return("Invalid Field")
+
+        return[name, country, age, gender]
 
 
 
@@ -129,17 +125,17 @@ def random_character_paragraph():
     character = random_character()
     if request.method == "POST":
         output = request.form.to_dict()
-        if output["name"] != "/":
+        if output["name"] != "":
             name = output["name"]
         else:
             name = random_character_name(character)
-
-        if output["CountryOfOrigin"] != "/":
+        print(output["CountryOfOrigin"])
+        if output["CountryOfOrigin"] != "":
             home = output["CountryOfOrigin"]
         else:
             home = random_character_home(character)
 
-        if output["age"] != "/":
+        if output["age"] != "":
             age = int(output["age"])
         else:
             age = random_character_age(character)
@@ -149,7 +145,6 @@ def random_character_paragraph():
         else:
             gender = random_character_gender(character)
 
-        print(name, age, home, gender)
     else:
         name = random_character_name(character)
         age = random_character_age(character)
