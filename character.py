@@ -106,6 +106,18 @@ def customization_info():
                     return[name, country, age, gender]
                 else:
                     return("Invalid Field")
+
+            if country != "":
+                if all(x.isalpha() or x.isspace() for x in country):
+                    return[name,country,age,gender]
+                else:
+                    return("Invalid Field")
+            if name != "":
+                if all(x.isalpha() or x.isspace() for x in name):
+                    return[name,country,age,gender]
+                else:
+                    return("Invalid Field")
+
             else:
                 return [name, country, age, gender]
         else:

@@ -37,9 +37,9 @@
                 <form action="/custom_process_test" method="post">
                     <label for="name"><h3>Name: </h3></label><br>
                     {% if name and name != 0%}
-                        <p1>{{name}}</p1><br>
+                        <p1> {{name}} </p1><br>
                     {% else %}
-                        <input type="text" id="name" name="name"><br>
+                        <input type="text" id="name" name=name><br>
                     {% endif %}
                     <label for="country"><h3>Country of Origin: </h3></label><br>
                     {% if country and country != 0%}
@@ -78,8 +78,8 @@
             <div class="center" >
             <form action="/generator" method="POST">
                 {% if name or country or age or gender and name != 0 %}
-                <input type="hidden" name="name" value= {{name}} />
-                <input type="hidden" name="CountryOfOrigin" value= {{country}} />
+                <input type="hidden" name="name" value= '{{name}}'/>
+                <input type="hidden" name="CountryOfOrigin" value= '{{country}}' />
                 <input type="hidden" name="age" value= {{age}} />
                 <input type="hidden" name="gender" value= {{gender}} />
                 <br>
