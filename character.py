@@ -62,7 +62,6 @@ def character_bio(text):
         },
         headers={'api-key': '9d321645-60cb-4d93-8e08-3583dd1c4ec9'}
     )
-    print(r.json()['output'])
     return ' '.join(re.split(r'(?<=[.:;])\s', r.json()['output'])[:4])
 
 
