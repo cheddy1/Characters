@@ -25,7 +25,7 @@ def character_picture(age, gender, key):
 
 
 def character_hobbies_young():
-    hobbies = open('hobbies.txt').read().splitlines()
+    hobbies = open('static/hobbies.txt').read().splitlines()
     hobby1 = random.choice(hobbies)
     hobby2 = random.choice(hobbies)
     hobby3 = random.choice(hobbies)
@@ -37,7 +37,7 @@ def character_hobbies_young():
 
 
 def character_hobbies_old():
-    hobbiesold = open('hobbiesold.txt').read().splitlines()
+    hobbiesold = open('static/hobbiesold.txt').read().splitlines()
     hobby1 = random.choice(hobbiesold)
     hobby2 = random.choice(hobbiesold)
     hobby3 = random.choice(hobbiesold)
@@ -102,7 +102,7 @@ def customization_info():
 
         if gender == "Male" or gender == "male" or gender == "Female" or gender == "female" or gender == "other" or gender == "Other" or gender == "":
             if age != "":
-                if 0 < int(age) < 120:
+                if 18 < int(age) < 120:
                     return[name, country, age, gender]
                 else:
                     return("Invalid Field")

@@ -46,13 +46,13 @@
                     {% else %}
                         <input type="text" id="country" name="CountryOfOrigin"><br>
                     {% endif %}
-                    <label for="age"><h3>Age: </h3></label><br>
+                    <label for="age"><h3>Age: (18-120)</h3></label><br>
                     {% if age and age != 0%}
                         <p1>{{age}}</p1><br>
                     {% else %}
                         <input type="text" id="age" name="age"><br>
                     {% endif %}
-                    <label for="gender"><h3>Gender: </h3></label><br>
+                    <label for="gender"><h3>Gender: (Male, Female, Other)</h3></label><br>
                     {% if gender and gender != 0%}
                         <p1>{{gender}}</p1><br>
                     {% else %}
