@@ -135,7 +135,7 @@ def random_character_paragraph():
         else:
             home = random_character_home(character)
 
-        if output["age"] != "":
+        if output["age"] != "/":
             age = int(output["age"])
         else:
             age = random_character_age(character)
