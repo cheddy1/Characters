@@ -1,6 +1,7 @@
 import requests
 from flask import request
 import random
+import re
 
 UI_API_1 = '241E1EB8-FFA54369-A0851285-2C688163'
 UI_API_2 = 'A3D1D37D-506D4D4B-B1C36F96-5FF139DB'
@@ -61,8 +62,9 @@ def character_bio(text):
         },
         headers={'api-key': '9d321645-60cb-4d93-8e08-3583dd1c4ec9'}
     )
-    groups = r.json()['output'].split('\n')
-    return '\n'.join(groups[:2])
+    print(r.json()['output'])
+    return ' '.join(re.split(r'(?<=[.:;])\s', r.json()['output'])[:4])
+
 
 
 def random_character_name(character):
