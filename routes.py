@@ -1,6 +1,7 @@
 from flask import render_template
 from . import app
 from .character import random_character_paragraph, customization_info, random_song
+from .tests import testsuite
 
 
 # Default route
@@ -26,6 +27,9 @@ def information():
 def customization():
     return render_template('customization.html')
 
+@app.route('/test', methods = ['POST','GET'])
+def test():
+    return render_template('test.html',datatest=testsuite())
 
 @app.route('/custom_process_test', methods=["POST","GET"])
 def custom_process_test():

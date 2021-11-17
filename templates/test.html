@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/bootstrap.min.css') }}">
+    <title>Character Generator</title>
+</head>
+<body>
+    <nav class="navbar navbar-custom navbar-expand-lg navbar-light" style="background-color: #ededed !important">
+      <div class="container">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+              <a class="nav-link" href="/">Home</a>
+              <a class="nav-link" href="/generator">Random Character</a>
+              <a class="nav-link" href="/customization">Custom Character</a>
+              <a class="nav-link" href="/information">Information</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="jumbotron p-5 text-center">
+                <h1 id="title" class="display-4 pb-4 pt-4" style="background-color: #ededed !important; border-radius: 20px;">Test Suite</h1>
+            </div>
+        </div>
+    </div>
+    <div class = "container">
+        <p> {{datatest}}
+
+        </p>
+    </div>
+
+
+
+    <script type=text/javascript src="{{url_for('static', filename='popper.min.js') }}"></script>
+    <script type=text/javascript src="{{url_for('static', filename='jquery.js') }}"></script>
+    <script type=text/javascript src="{{url_for('static', filename='bootstrap.min.js') }}"></script>
+</body>
+</html>
