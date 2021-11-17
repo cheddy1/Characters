@@ -65,12 +65,10 @@ def character_bio(text):
     return ' '.join(re.split(r'(?<=[.:;])\s', r.json()['output'])[:4])
 
 
-
 def random_character_name(character):
-    title = character.get('name').get('title')
     first = character.get('name').get('first')
     last = character.get('name').get('last')
-    return title + '.' + ' ' + first + ' ' + last
+    return first + ' ' + last
 
 
 def random_character_gender(character):
@@ -92,6 +90,7 @@ def random_character_picture(character):
     picture = character[0]['photo']
     return picture
 
+
 def customization_info():
     if request.method == "POST":
         output = request.form.to_dict()
@@ -103,7 +102,6 @@ def customization_info():
             return ("Invalid Field")
 
         if age != "":
-            print(age)
             if all(x.isdigit() or x == " " for x in age):
                 if int(age) > 120 or int(age) < 18:
                     return("Invalid Field")
@@ -119,7 +117,6 @@ def customization_info():
                 return("Invalid Field")
 
         return[name, country, age, gender]
-
 
 
 def random_character_paragraph():
