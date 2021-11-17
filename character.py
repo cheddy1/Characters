@@ -5,10 +5,22 @@ import re
 
 UI_API_1 = '241E1EB8-FFA54369-A0851285-2C688163'
 UI_API_2 = 'A3D1D37D-506D4D4B-B1C36F96-5FF139DB'
+access_token = "?access_token=CWBwf6Bb0yL5QeJcefGLk9F2JLjnDt91Q9QNBHNC-gcKsW0kibHga6BuPz2No7wV";
+API_Song = "https://api.genius.com/songs/"
 
 
 def random_character():
     return requests.get("https://randomuser.me/api/").json().get('results')[0]
+
+
+def random_song():
+    song_id = str(random.randint(1, 2500000))
+    res = requests.get(API_Song + song_id + access_token)
+
+    while res.status_code != 200:
+        res = requests.get(API_Song + song_id + access_token)
+    song = res.json()['response']['song']
+    return song['title'] + ' by ' + song['primary_artist']['name']
 
 
 def character_picture(age, gender, key):
@@ -162,7 +174,8 @@ def random_character_paragraph():
     hobbiestext = "{}, {}, and {}.".format(hobbies[0], hobbies[1], hobbies[2])
     poem = character_poem()
     text = character_bio("{} is a {} year old {} from {}.".format(name, age, gender, home))
-    return [text, picture, name, home, age, gender, poem, hobbiestext]
+    song = random_song()
+    return [text, picture, name, home, age, gender, poem, hobbiestext, song]
 
 
 def random_character_link():
