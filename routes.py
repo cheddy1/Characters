@@ -1,7 +1,7 @@
 from flask import render_template
 from . import app
 from .character import random_character_paragraph, customization_info
-from .tests import test1, test2, test3, test4, test5,check_string_in_file,age_check
+from .tests import test1, test2, test3, test4, test5, test6, check_string_in_file,age_check
 
 # Date: 11/18/21
 # Authors: EECS 448 Group 15
@@ -39,6 +39,7 @@ def customization():
 @app.route('/test', methods=['POST', "GET"])
 def test():
     character = random_character_paragraph()
+    custom_info = customization_info()
     testone = test1(character)
     print(testone)
     testtwo = test2(character)
@@ -49,8 +50,10 @@ def test():
     print(testfour)
     testfive = test5(character)
     print(testfive)
+    testsix = test6(custom_info)
+    print(testsix)
 
-    return render_template('test.html', test1=testone, test2=testtwo, test3=testthree, test4=testfour, test5=testfive)
+    return render_template('test.html', test1=testone, test2=testtwo, test3=testthree, test4=testfour, test5=testfive,test6=testsix)
 
 
 # Post user input Customization page route

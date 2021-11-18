@@ -71,6 +71,26 @@ def test5(character):
         return ("Test 5 failed: Song field is invalid for character")
     else:
         return ("Test 5 passed: Song field is valid for character")
+#Run input field tests with possible custom input
+def test6(custom_info):
+   name="John Thomas"
+   country="United States"
+   age=27
+   gender="male"
+   if not all(x.isalpha() or x == " " for x in name):
+            return ("Test 6 failed: Custom input in name field fails")
+   elif not all(x.isalpha() or x == " " for x in country):
+            return ("Test 6 failed: Custom input in country field fails")
+   elif age_check(age) == False:
+            return ("Test 6 failed: Custom input in age field fails")
+   elif not all(x.isalpha() or x == " " for x in gender):
+            return ("Test 6 failed: Custom input in gender field fails")
+   else:
+            return ("Test 6 passed: Custom input in name,country, age and gender field works")
+
+
+
+
 
 
 
