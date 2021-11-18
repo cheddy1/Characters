@@ -1,0 +1,30 @@
+Group 15
+EECS 448
+11/18/21
+Maintenance Plan
+
+	As our product stands right now, we would be spending little to no money at all to maintain for any period. All the API’s that we are using are free to use,
+    as of the date of this essay, and require no payment plans in order to use their service. However, there are three potential factors that could induce cost 
+    and make our project more difficult to maintain.
+
+	We created a web app, so we would have to worry about publication. At the time of this essay, we still have a development build and not one ready to be published. 
+    We would have to be cognizant of what modes we release our project on, because certain platforms will be more costly than others, and result in more difficulty to 
+    maintain. For example, publishing an app for IOS not only requires a fee to be paid, but also a yearly membership fee to be an “IOS Developer”. On the other hand, 
+    the Google Play store only requires a ‘one time twenty five dollar’ fee that will allow us to publish our web app and never have to worry about paying another dime 
+    to Google. The difference in fees such as these would have to be weighted carefully before any publication were to be chosen.
+
+	In terms of the free API’s that we have chosen, there are two potential situations that could induce fees and would prove to be costly down the road. The first being 
+    the possibility of one of the API’s suddenly costing money. If this were to happen down the road, we would either be forced to pay the money, which could potentially 
+    be a monthly or yearly subscription, or spend the valuable time looking for another API that is similar enough to the one we are already using. In both situations we 
+    are losing money because the cost of a developer to make a potentially big change to our code base could be equivalent to that of a yearly subscription to an API 
+    service.
+
+	The second instance in which API’s could prove to be costly to us and our product would be the need for improvements to the functionality of our project. 
+    The current version of our project is not the most sophisticated it could be and that is partially due to the use of free API’s. It is common knowledge that using free 
+    resources will not yield as precise and definitive of results that a costly resource would. Spending money now, rather than later, on better API’s would not only 
+    increase the functionality of our project but get rid of the “X factor” that free APIs prove to be. Instead of getting shocked down the road when we can no longer use 
+    an API, we would already be stuck behind a pay wall, all the while getting better service than we would have otherwise.
+
+	It suffices to say that our cost of maintenance at this point in our project’s life cycle is still a variable being affected by many factors. These factors will make 
+    future publication and maintenance of our project a topic that needs to be discussed and decisions can not be made lightly. It must be decided that the future cost is
+    worth the time and the risk.
