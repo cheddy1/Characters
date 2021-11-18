@@ -27,9 +27,23 @@ def information():
 def customization():
     return render_template('customization.html')
 
+
 @app.route('/test', methods = ['POST','GET'])
 def test():
-    return render_template('test.html', test1=test1(), test2=test2(), test3=test3(), test4=test4(), test5=test5())
+    character = random_character_paragraph()
+    testone = test1(character)
+    print(testone)
+    testtwo = test2(character)
+    print(testtwo)
+    testthree = test3(character)
+    print(testthree)
+    #testfour = test4(character)
+    # print(testfour)
+    testfive = test5(character)
+    print(testfive)
+
+    return render_template('test.html', test1=testone, test2=testtwo, test3=testthree, test4=testthree, test5=testfive)
+
 
 @app.route('/custom_process_test', methods=["POST","GET"])
 def custom_process_test():
