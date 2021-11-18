@@ -5,7 +5,7 @@ import re
 
 UI_API_1 = '241E1EB8-FFA54369-A0851285-2C688163'
 UI_API_2 = 'A3D1D37D-506D4D4B-B1C36F96-5FF139DB'
-access_token = "?access_token=CWBwf6Bb0yL5QeJcefGLk9F2JLjnDt91Q9QNBHNC-gcKsW0kibHga6BuPz2No7wV";
+access_token = "?access_token=CWBwf6Bb0yL5QeJcefGLk9F2JLjnDt91Q9QNBHNC-gcKsW0kibHga6BuPz2No7wV"
 API_Song = "https://api.genius.com/songs/"
 
 
@@ -16,9 +16,10 @@ def random_character():
 def random_song():
     song_id = str(random.randint(1, 2500000))
     res = requests.get(API_Song + song_id + access_token)
-
-    while res.status_code != 200:
-        res = requests.get(API_Song + song_id + access_token)
+    if res.status_code != 200:
+        while res.status_code != 200:
+            song_id = str(random.randint(1, 2500000))
+            res = requests.get(API_Song + song_id + access_token)
     song = res.json()['response']['song']
     return song['title'] + ' by ' + song['primary_artist']['name']
 
@@ -139,7 +140,6 @@ def random_character_paragraph():
             name = output["name"]
         else:
             name = random_character_name(character)
-        print(output["CountryOfOrigin"])
         if output["CountryOfOrigin"] != "":
             home = output["CountryOfOrigin"]
         else:
@@ -160,13 +160,11 @@ def random_character_paragraph():
         age = random_character_age(character)
         home = random_character_home(character)
         gender = random_character_gender(character)
-
     picture = random_character_picture(character_picture(age, gender, UI_API_1))
     if picture == "https://uifaces.co/images/cooldown-avatar.png":
         picture = random_character_picture(character_picture(random_character_age(character), random_character_gender(character), UI_API_2))
         if picture == "https://uifaces.co/images/cooldown-avatar.png":
             picture = character['picture']['large']
-
     if age >= 60:
         hobbies = character_hobbies_old()
     else:
