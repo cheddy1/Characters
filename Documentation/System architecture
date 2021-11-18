@@ -1,9 +1,0 @@
-For the project 3 prototype our group chose to use the 3-Tier architecture. Our prototype is a web app that will generate a character with accompanying information such as a 
-photo and details about the character. One reason why we chose the 3-tier architecture is because we could split up the different parts of our prototype into the three categories.
-First, we have the presentation layer, which in our case we made a webpage using html and CSS. Our webpage has tabs that will send you to a new page where a randomly generated
-character will be displayed. The user interface allows for the user to generate a character and the commands are taken down to the logic level where the API’s can be called to
-gather the required aspects needed for character generation. For the logic level our prototype has the classes where the different API’s (Application Programming Interface)
-are called where all the data is stored. This layer is used to process through the API’s and takes the data to add it to the presentation layer. Using python and flask makes
-it simple to develop a solid back end and allows us to scale our prototype for project 4. The final layer in our prototype is the data tier, which is the web API’s we use for
-all the aspects of the characters. This allows us to store a vast amount of different data that can be put together to create a unique character each time the user generates
-a new character. The logic layer can access these APIs for each aspect of the character and push it up the tiers to the presentation layer where it can be displayed to the user. 
