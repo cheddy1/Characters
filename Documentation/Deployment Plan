@@ -1,0 +1,25 @@
+Deployment Plan Essay
+
+  There are multiple ways we could deploy our project. The two main ones that we found best would be to either self-host it ourselves or have a cloud platform provider like Google
+Cloud, Amazon Web Services (AWS), or Microsoft Azure host it. There are different steps that need to be taken depending on which process is chosen. We will list the steps for
+both processes. 
+	
+  The following steps is how we would deploy our project by self-hosting. The first step would be to decide what platform we want to host the app on. We would pick Windows or
+Linux. The next step would be to configure a web server gateway interface (WSGI). Linux would require mod_wsgi and Windows would require wfastcgi, both of these are server
+modules that act as a WSGI compliant for python-based projects. Once the WSGI is configured, we need to set up a websever to accept the HTTP requests. We will use apache
+for the Linux platform and IIS for the windows platform. The Final step is to open the required server ports that make the app accessible.
+  
+  The following steps is how we would deploy our project on a cloud-based platform like Google Cloud. These steps are broken into two parts. Part 1 is setting up a fresh
+project on the Google App Engine and Part 2 is deploying our project from our local directory. PART1: First we would need to make an account/profile that will hold our project.
+One we are signed in; we need to create and setup the foundation for a new project to be made in the Google App Engine dashboard. Once we have a new project created on the
+Google App Engine part 1 is completed, and we start on part 2: deploying our local project to the cloud. The next steps will take place in our computer’s terminal.
+First, we need to install the Google Cloud SDK which will give us command line tools, gcloud, gsutil, and bq. These tools will allow us to successfully deploy our project.
+The first command we run is $gcloud auth login. This command will let us authenticate that we are the owner of the account. Next, we use the command $gcloud config to set our
+local project our Google project ID. Finally, we run the command $gcloud app deploy. This final step will officially deploy our project as a live python web application into the
+Google Cloud platform.
+
+  There are many cost variables that come when deploying a web app. We would need a domain name which on average costs around $10-$20 per year.  There are also infrastructure
+costs that come with hosting the web app. The prices would depend on how much data our web app would use, but on average hosting costs would range from $70-$320 per month.
+Each cloud-based platform provider also have their own pricing. If we chose to have google cloud host our project, we would pay roughly $50 per month. Microsoft Azure has a 
+free tier, but that only covers 1 GB of disk space. If we needed more space, we would have to pay $54.75 per month. For Amazon Web Services, we could start out paying between
+$20-30 per month, but this would increase depending on the amount of traffic we generate.
