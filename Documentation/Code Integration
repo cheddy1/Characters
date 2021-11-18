@@ -1,0 +1,11 @@
+Code integration Essay
+
+  For our project, team members worked on the project based on what needed to be done next in our design plan. When somebody wanted to work on the project or add to the project,
+  they would determine what module or element needed to be implemented next. Then we would simply pull the most recent GitHub repository. From there each member would work on
+  what they felt needed to be done. Once completed, the team member would then test what they had just written in order to determine what bugs would need to be fixed.
+  If there were new bugs found during the testing, we would either fix them instantly, or let other group members know what needed to be fixed.  Finally, after everything was
+  debugged and the module was finished, we would push our changes to our GitHub repository. Everyone worked at their own pace and completed what they felt needed to be done at
+  the given time. This strategy coincides with the Top Down Integration strategy. Top Down Integration entails coding the higher level modules first, then the next level of
+  modules, and so on. We felt like this was the best strategy because it allowed everyone to know what was already completed and what needed to be done next. This strategy also
+  allowed us to detect and isolate faults easier because each fault was found as the code was being written. This saved the team time later because code that was already
+  implemented had been debugged. Our unit testing was already done.
