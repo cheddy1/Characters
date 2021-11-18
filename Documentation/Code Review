@@ -1,0 +1,27 @@
+Code Review Essay
+During our code review, we found multiple faults that needed to be fixed. The faults we found were as followed: entering a space fault, Inconsistent new lines, Overload of API
+pictures, Test cases not loading, and a Random song characteristic stuck in a loop. These faults were mainly fixed by the people who found them.
+	
+  The spacing fault happened when a user tried to input a value that included a space into our custom character generator. When someone wanted to input a custom characteristic
+  that consisted of a space, the code would only accept the value before the space and would not display what followed the space. Mohit found this bug on November 15th and fixed
+  it on November 15th and 16th by both Mohit and Christian. In order to solve this fault, they implemented the isalpha() function that is built In to python. This function
+  returns true if a value consists of only letters. This allowed us to include the space in a user’s input and return exactly what the input was.
+	
+  The inconsistent new line fault displayed an inconsistent number of new lines on our randomized poem for each character. This fault was found on November 12th by Hunter and
+  fixed on November 12th by Hunter. In order to fix this fault, Hunter utilized the white-space HTML operator. This allowed us to get a consistent number of lines on our final
+  display.
+	
+  The Overload of API pictures returned a blank picture to the screen. This was a cause of calling the API we used to generate our random characters picture. This bug was
+  found on November 8th by Hunter ad fixed on November 9th by Christian. In order to solve this fault, Christian utilized multiple API keys that minimized the overload we
+  generated. He also added an additional API as a last case scenario. This added another level of consistency to our project.
+	
+  Another fault me fond was in the test cases. While running our test suite, we found that they were taking an extreme amount to time to load or in some cases, not loading at all.
+  This fault was found on November 17th by Christian and fixed on November 18th by Christian. To fix this bug, Christian decided to only run our random_character() function once.
+  This reduced the number of API call we made and drastically decreased the time our test took.
+	
+  The random song characteristics stuck in a loop fault happened when we could not get a valid song to return in our first request. When a valid return was on generated, 
+  the function would get stuck in a loop and would not return. This fault was found on November 18th by Christian and fixed on November 18th by Christian. To fix this problem, 
+  Christian added another randomint() function that returns a random number between to values. This added a failsafe way to generate a valid song and stopped the loop from
+  happening.
+	
+  All these faults were fixed and did not generate any other errors during regression testing.
