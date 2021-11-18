@@ -35,13 +35,13 @@
                     <p1>Enter information that describes your character. Any field left blank will be randomized.</p1><br><br>
                 </div>
                 <form action="/custom_process_test" method="post">
-                    <label for="name"><h3>Name: </h3></label><br>
+                    <label for="name"><h3>Name: Can only use characters (A-Z) </h3></label><br>
                     {% if name and name != 0%}
                         <p1> {{name}} </p1><br>
                     {% else %}
                         <input type="text" id="name" name=name><br>
                     {% endif %}
-                    <label for="country"><h3>Country of Origin: </h3></label><br>
+                    <label for="country"><h3>Country of Origin: Can only use characters (A-Z) </h3></label><br>
                     {% if country and country != 0%}
                         <p1>{{country}}</p1><br>
                     {% else %}

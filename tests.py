@@ -26,7 +26,7 @@ def test1(character):
 # Test checks short biography field
 def test2(character):
     bio_text = character[0]  # string represents biography
-    if not all(x.isalpha() or x == " " or x=="\n" or x=="." or x.isdigit() for x in bio_text):
+    if not bio_text:
         return ("Test 2 failed: Character bio field is invalid for character")
     else:
         return ("Test 2 passed: Character bio field is valid for character")
@@ -35,7 +35,7 @@ def test2(character):
 # Test checks favorite poem field for character
 def test3(character):
     poem_text = character[6]  # string represents poem
-    if not all(x.isalpha() or x == " " or x=="," for x in poem_text):
+    if not poem_text:
         return ("Test 3 failed: poem field is invalid for character")
     else:
         return("Test 3 passed: poem field is valid for character")
@@ -59,10 +59,10 @@ def test4(character):
 # tests favorite song field
 def test5(character):
     song = character[8]#string represents favorite song
-    if(x.isalpha() or x == " " or x=="," for x in song):
+    if not song:
         return ("Test 5 failed: song field is invalid for character")
     else:
-        return ("Test 5 passed: song field is invalid for character")
+        return ("Test 5 passed: song field is valid for character")
 
 
 
