@@ -1,7 +1,7 @@
 from flask import render_template
 from . import app
 from .character import random_character_paragraph, customization_info, random_song
-from .tests import testsuite
+from .tests import test1, test2, test3, test4, test5
 
 
 # Default route
@@ -29,7 +29,7 @@ def customization():
 
 @app.route('/test', methods = ['POST','GET'])
 def test():
-    return render_template('test.html',datatest=testsuite())
+    return render_template('test.html', test1=test1(), test2=test2(), test3=test3(), test4=test4(), test5=test5())
 
 @app.route('/custom_process_test', methods=["POST","GET"])
 def custom_process_test():
