@@ -39,21 +39,7 @@ def customization():
 @app.route('/test', methods=['POST', "GET"])
 def test():
     character = random_character_paragraph()
-    custom_info = customization_info()
-    testone = test1(character)
-    print(testone)
-    testtwo = test2(character)
-    print(testtwo)
-    testthree = test3(character)
-    print(testthree)
-    testfour = test4(character)
-    print(testfour)
-    testfive = test5(character)
-    print(testfive)
-    testsix = test6(custom_info)
-    print(testsix)
-
-    return render_template('test.html', test1=testone, test2=testtwo, test3=testthree, test4=testfour, test5=testfive,test6=testsix)
+    return render_template('test.html', test1=test1(character), test2=test2(character), test3=test3(character), test4=test4(character), test5=test5(character), test6=test6())
 
 
 # Post user input Customization page route
