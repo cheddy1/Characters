@@ -1,0 +1,35 @@
+Bug: Overload of the Random Picture API returns blank image
+Solution: Multiple API keys that minimize the overload and addition API for a last resort case
+Date found: 11/8
+Date fixed: 11/9
+Who fixed: Christian
+
+Bug: Inconsistent new lines on the randomized poem
+Solution: utilization of the white-space operator in html
+Date found: 11/12
+Date Fixed: 11/12
+Who Fixed: Hunter
+
+Bug: Words after a space in the name and country fields do not get added onto the final generation of a character
+Solution: Update our verification to allow for spaces and use the isalpha() built in function
+Date found: 11/14
+Date fixed: 11/15
+Who fixed: Mohit
+
+Bug: Didn't accept input on custom character form with spaces
+Solution: Added single quotes around value fields in html
+Date found: 11/15
+Date fixed: 11/16
+Who fixed: Mohit and Christian
+
+Bug: Test cases take very long to load, sometimes don't load at all
+Solution: Only run the random_character function once, which reduces the amount of API calls
+Date found: 11/17
+Date fixed: 11/18
+Who fixed: Christian
+
+Bug: Random song would continue to loop if it could not find a valid song in the first request
+Solution: Add another randomint() call in the while loop to get a new int
+Date found: 11/18
+Date fixed: 11/18
+Who fixed: Christian
